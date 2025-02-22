@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PassX - Secure Password Manager</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <!-- Login Section -->
+    <div id="login-container" class="container">
+        <h2>Welcome To PassX</h2>
+        <br>
+        <form onsubmit="return loginUser()">
+            <label for="username">Username:</label>
+            <input type="text" id="login-username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="login-password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <!-- Password Manager Section -->
+    <div id="password-container" class="container" style="display: none;">
+        <nav>
+            <div class="logo">PassX</div>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+                <li onclick="logout()">Logout</li>
+            </ul>
+        </nav>
+        <h2>PASSWORD MANAGER</h1>
+        <h6>Manage your passwords securely</h6>
+        <br>
+        <h2>Your Passwords <span id="alert">(Copied!)</span></h2> 
+        <table>
+            <tr>
+                <th>Website</th>
+                <th>Username</th>
+                <th>Password</th>
+                <th>Delete</th>
+            </tr>
+        </table>
+
+        <h2>Add a Password</h2>
+        <form onsubmit="return savePassword()">
+            <label for="website">Website:</label>
+            <input type="text" id="website" required>
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required>
+            <button class="btn" type="submit">Save</button>
+        </form>
+    </div>
+
+    <script src="script1.js"></script>
+</body>
+</html>
